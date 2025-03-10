@@ -6,7 +6,14 @@ const Info = () => {
 
   return (
     (<h1>{searchValue.replace(/[\n\r]+/g, " ")}</h1>),
-    data["ABIES-N"].description
+    (<h4>description{data["ABIES-N"].description}</h4>)
   );
+  //   data["ABIES-N"].dose,
+  //   data["ABIES-N"].keypoints,
+  //   data["ABIES-N"].link,
+  //   data["ABIES-N"].long_name,
+  //   data["ABIES-N"].relationship,
+  //   data["ABIES-N"].symptoms,
+  //   data["ABIES-N"].short_name,
 };
 export default Info;
