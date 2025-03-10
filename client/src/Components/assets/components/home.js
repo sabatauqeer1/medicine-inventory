@@ -1,22 +1,16 @@
-
-
 import data from "./data.json";
-import "./signup.css"
+import details from "./detailsdata.json";
+import "./signup.css";
 import { useState } from "react";
-import {useNavigate} from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
   const [searchValue, setSearchValue] = useState("");
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const HandleSubmit = async () => {
-    
     try {
-  navigate(`/api/myInventory/${searchValue.trim()}/info`)
-
+      navigate(`/api/myInventory/${searchValue.trim()}/info`);
     } catch (error) {
       console.error("Error submitting search:", error);
     }
@@ -24,19 +18,9 @@ const Home = () => {
 
   const handleSearch = (e) => {
     setSearchValue(e.target.value);
-
   };
-  
 
-
-
-
-
-
-  
-  
   return (
-    
     <div>
       <div>
         <div className="logo">my Inventory</div>
@@ -60,35 +44,25 @@ const Home = () => {
             .filter((item) => {
               const searchTerm = searchValue.toLowerCase();
               const itemValue = item.itemValue.toLowerCase();
-              return searchTerm && itemValue.startsWith(searchTerm) && itemValue !== searchTerm
-             
-            },
-            <div className="popup-hide">1x</div>
-           )
+              return (
+                searchTerm &&
+                itemValue.startsWith(searchTerm) &&
+                itemValue !== searchTerm
+              );
+            }, <div className="popup-hide">1x</div>)
             .map((item) => (
               <div
                 className="dropdown-row"
                 onClick={() => setSearchValue(item.itemValue)}
                 key={item.itemValue}
               >
-            
-                <div>  {item.itemValue}   </div>
-
-                
-                
-                  
-
-
-
-                </div>
-              ))}
+                <div> {item.itemValue} </div>
+              </div>
+            ))}
         </div>
       </div>
-
-
     </div>
-
   );
-}
+};
 
 export default Home;
