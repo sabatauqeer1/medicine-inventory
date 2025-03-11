@@ -3,12 +3,10 @@ import data from "./detailsdata.json";
 const Info = () => {
   let params = useParams();
   let searchValue = params.searchValue;
+  let med;
 
-  return (
-    (<h1>{searchValue.replace(/[\n\r]+/g, " ")}</h1>),
-    (<h4>description{data["ABIES-N"].description}</h4>)
-  );
-  //   data["ABIES-N"].dose,
+  return { searchValue };
+
   //   data["ABIES-N"].keypoints,
   //   data["ABIES-N"].link,
   //   data["ABIES-N"].long_name,

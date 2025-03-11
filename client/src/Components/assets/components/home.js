@@ -1,5 +1,4 @@
 import data from "./data.json";
-import details from "./detailsdata.json";
 import "./signup.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
