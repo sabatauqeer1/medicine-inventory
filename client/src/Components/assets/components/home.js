@@ -22,43 +22,38 @@ const Home = () => {
   return (
     <div>
       <div>
-        <div className="logo">my Inventory</div>
-        <p>Account</p>
-        <p>Theme</p>
-        <div></div>
-        <input
-          type="text"
-          value={searchValue}
-          name="itemValue"
-          placeholder="search..."
-          onChange={handleSearch}
-          autoComplete="on"
-        />
-        <div>
-          <button onClick={HandleSubmit}>Submit</button>
-        </div>
+        <h1 className="logo">my Inventory</h1>
+      </div>
 
-        <div className="dropdown">
-          {data
-            .filter((item) => {
-              const searchTerm = searchValue.toLowerCase();
-              const itemValue = item.itemValue.toLowerCase();
-              return (
-                searchTerm &&
-                itemValue.startsWith(searchTerm) &&
-                itemValue !== searchTerm
-              );
-            }, <div className="popup-hide">1x</div>)
-            .map((item) => (
-              <div
-                className="dropdown-row"
-                onClick={() => setSearchValue(item.itemValue)}
-                key={item.itemValue}
-              >
-                <div> {item.itemValue} </div>
-              </div>
-            ))}
-        </div>
+      <input
+        type="text"
+        value={searchValue}
+        name="itemValue"
+        placeholder="search..."
+        onChange={handleSearch}
+        autoComplete="on"
+      />
+      <button onClick={HandleSubmit}>Submit</button>
+      <div className="dropdown">
+        {data
+          .filter((item) => {
+            const searchTerm = searchValue.toLowerCase();
+            const itemValue = item.itemValue.toLowerCase();
+            return (
+              searchTerm &&
+              itemValue.startsWith(searchTerm) &&
+              itemValue !== searchTerm
+            );
+          }, <div className="popup-hide">1x</div>)
+          .map((item) => (
+            <div
+              className="dropdown-row"
+              onClick={() => setSearchValue(item.itemValue)}
+              key={item.itemValue}
+            >
+              <div> {item.itemValue} </div>
+            </div>
+          ))}
       </div>
     </div>
   );

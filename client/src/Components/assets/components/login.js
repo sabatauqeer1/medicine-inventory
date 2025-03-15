@@ -10,7 +10,6 @@ const Login = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setlogin] = useState(false);
 
   //credentials
   const handleSubmit = async (e) => {
@@ -22,7 +21,6 @@ const Login = () => {
         { withCredentials: true }
       );
 
-      setlogin(true);
       if (response.status === 200) {
         return Navigate("/api/myInventory/home/search");
       } else {
@@ -35,6 +33,7 @@ const Login = () => {
     //login form
 
     <div>
+      <div className="logo">my Inventory</div>
       <form>
         <input
           type="text"

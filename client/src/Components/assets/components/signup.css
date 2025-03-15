@@ -1,8 +1,6 @@
-/* /* #################### ################################ ####################
-/* #################### RELEVANT CODE STARTS AT LINE 145 #################### */
-/* #################### ################################ #################### */
 
-/* Inter / Sans-serif */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
@@ -138,9 +136,7 @@ code {
   max-width: 24ch;
 }
 
-/* #################### ########################### #################### */
-/* #################### All form-related CSS below. #################### */
-/* #################### ########################### #################### */
+
 
 .form {
   align-self: center;
@@ -214,23 +210,14 @@ code {
   text-align: center;
 }
 
-.logo {
-  font-family: "Roboto", sans-serif; /* You can change this to Inter or any font */
-  font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
-  font-weight: 700; /* Bold for emphasis */
-  color: #303030; /* Matches the form styling */
-  text-transform: uppercase; /* Makes it all caps for a strong logo feel */
-  letter-spacing: 0.1rem; /* Adds spacing between letters */
-  margin-bottom: 2rem; /* Adds space between the logo and form */
-  text-align: center; /* Centers the logo */
-}
+
 .register {
   color: #34b233;
 }
 
 @media (min-width: 768px) {
   .logo {
-    text-align: left; /* Aligns to the left on larger screens */
+    text-align: left; 
   }
 }
 .popup-hide{
@@ -245,4 +232,15 @@ code {
   width: 40%;
   height: 100%;
   margin-left: 90px;
+}
+.logo {
+  font-family: "Roboto", sans-serif; 
+  font-size: clamp(6rem, 5vw, 4rem);
+  font-weight: 700; 
+  color: #303030; 
+  text-transform: uppercase;
+  letter-spacing: 0.1rem; 
+
+
+  text-align: center; 
 }
