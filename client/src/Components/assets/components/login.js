@@ -23,8 +23,8 @@ const Login = () => {
       );
 
       setlogin(true);
-      if (login === true) {
-        return Navigate("home/search", { replace: true });
+      if (response.status === 200) {
+        return Navigate("/api/myInventory/home/search");
       } else {
         return <p>Please enter correct email and password</p>;
       }

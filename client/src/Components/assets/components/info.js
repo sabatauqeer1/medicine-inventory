@@ -1,17 +1,25 @@
 import { useParams } from "react-router-dom";
 import data from "./detailsdata.json";
+
 const Info = () => {
-  let params = useParams();
-  let searchValue = params.searchValue;
-  let med;
+  let { searchValue } = useParams();
 
-  return { searchValue };
+  if (!data[searchValue]) {
+    return <div>No data found for {searchValue}</div>;
+  }
 
-  //   data["ABIES-N"].keypoints,
-  //   data["ABIES-N"].link,
-  //   data["ABIES-N"].long_name,
-  //   data["ABIES-N"].relationship,
-  //   data["ABIES-N"].symptoms,
-  //   data["ABIES-N"].short_name,
+  return (
+    <div>
+      <h2>Details for {searchValue}</h2>
+      <ul>
+        {Object.keys(data[searchValue]).map((key) => (
+          <li key={key}>
+            <strong>{key}:</strong> {JSON.stringify(data[searchValue][key])}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
+
 export default Info;
