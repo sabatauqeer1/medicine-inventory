@@ -244,3 +244,6 @@ code {
 
   text-align: center; 
 }
+.dv{
+  display: block;
+}
