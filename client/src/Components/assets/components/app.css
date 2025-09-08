@@ -1,0 +1,35 @@
+.logo {
+  text-align: center;
+  color: red;
+  font-size: 1.5rem;
+}
+.search-bar {
+  text-align: center;
+}
+button {
+  text-align: center;
+}
+.dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 20px 0;
+}
+
+#data {
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+}

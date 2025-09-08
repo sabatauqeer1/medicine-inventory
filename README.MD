@@ -1,8 +1,3 @@
-# myInventory-app
-# myInventory-app
-# myInventory-app
-# myInventory-app
-# myInventory
-# myInventory
-# my-inventory
-# my-inventory
+# homeo-inventory
+# homeo-inventory
+# homeo-inventory

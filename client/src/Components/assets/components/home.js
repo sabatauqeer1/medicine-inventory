@@ -1,8 +1,8 @@
 import data from "./data.json";
-import "./signup.css";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import "./app.css";
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
@@ -21,19 +21,22 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        <h1 className="logo">my Inventory</h1>
+      <div className="logo">
+        <h1>HOMEO INVENTORY</h1>
       </div>
-
-      <input
-        type="text"
-        value={searchValue}
-        name="itemValue"
-        placeholder="search..."
-        onChange={handleSearch}
-        autoComplete="on"
-      />
-      <button onClick={HandleSubmit}>Submit</button>
+      <div className="search-bar">
+        <input
+          type="text"
+          value={searchValue}
+          name="itemValue"
+          placeholder="search..."
+          onChange={handleSearch}
+          autoComplete="on"
+        />
+      </div>
+      <div className="search-bar">
+        <button onClick={HandleSubmit}>Submit</button>
+      </div>
       <div className="dropdown">
         {data
           .filter((item) => {
@@ -44,7 +47,7 @@ const Home = () => {
               itemValue.startsWith(searchTerm) &&
               itemValue !== searchTerm
             );
-          }, <div className="popup-hide">1x</div>)
+          })
           .map((item) => (
             <div
               className="dropdown-row"
