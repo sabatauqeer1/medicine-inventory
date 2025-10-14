@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <div className="logo">
-        <h1>HOMEO INVENTORY</h1>
+        <h1>Medicine Inventory</h1>
       </div>
       <div className="search-bar">
         <input
