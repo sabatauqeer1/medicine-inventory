@@ -9,7 +9,7 @@ const Home = () => {
 
   const HandleSubmit = async () => {
     try {
-navigate(`/api/myInventory/${searchValue.trim()}/info`);
+navigate(`/api/medicineInventory/${searchValue.trim()}/info`);
     } catch (error) {
       console.error("Error submitting search:", error);
     }
