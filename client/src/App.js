@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="api/medicineInventory/home/search" element={<Home />} />
+        <Route path="/api/medicineInventory/home/search" element={<Home />} />
        <Route path="/medicineInventory/:searchValue/info" element={<Info />} />
 
       </Routes>
