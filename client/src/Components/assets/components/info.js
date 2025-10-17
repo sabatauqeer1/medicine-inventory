@@ -41,7 +41,8 @@ const Info = () => {
       </button>
       <button
         onClick={() => {
-          window.location = "/";
+                    window.location = "http://localhost:3000/api/myInventory/home/search";
+
         }}
       >
         home
