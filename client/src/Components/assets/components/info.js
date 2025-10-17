@@ -41,7 +41,7 @@ const Info = () => {
       </button>
       <button
         onClick={() => {
-                    window.location = "http://localhost:3000/api/medicineInventory/home/search";
+                    window.location = "https://medicine-inventory-cqhl.onrender.com/api/medicineInventory/home/search";
 
         }}
       >
